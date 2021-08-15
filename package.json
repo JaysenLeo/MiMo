@@ -1,0 +1,22 @@
+{
+  "name": "mimo",
+  "version": "1.0.0",
+  "description": "陪伴你的猫猫",
+  "main": "main.js",
+  "scripts": {
+    "test": "test_mimo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelovLee/Mimo.git"
+  },
+  "keywords": [
+    "golang"
+  ],
+  "author": "JaysenLeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelovLee/Mimo/issues"
+  },
+  "homepage": "https://github.com/AngelovLee/Mimo#readme"
+}

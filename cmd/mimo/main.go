@@ -8,6 +8,11 @@ import (
 	"github.com/asticode/go-astilectron"
 )
 
+var (
+	mainWindowHeight = 1080
+	mainWindowWidth  = 1920
+)
+
 func main() {
 	// Set logger
 	l := log.New(log.Writer(), log.Prefix(), log.Flags())
@@ -34,8 +39,8 @@ func main() {
 	var w *astilectron.Window
 	if w, err = a.NewWindow("./static/main/index.html", &astilectron.WindowOptions{
 		Center: astikit.BoolPtr(true),
-		Height: astikit.IntPtr(800),
-		Width:  astikit.IntPtr(1200),
+		Height: astikit.IntPtr(mainWindowHeight),
+		Width:  astikit.IntPtr(mainWindowWidth),
 	}); err != nil {
 		l.Fatal(fmt.Errorf("main: new window failed: %w", err))
 	}

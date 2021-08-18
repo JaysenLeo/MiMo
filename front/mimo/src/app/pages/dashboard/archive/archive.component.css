@@ -1,0 +1,15 @@
+:host {
+  color: #3e3e3e
+}
+
+
+/* */
+:host ::ng-deep pre[class*="language-"] {
+  background: #2d2d2d;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px 1px #333;
+}
+
+:host ::ng-deep img {
+  box-shadow: 1px 1px 5px #ccc;
+}

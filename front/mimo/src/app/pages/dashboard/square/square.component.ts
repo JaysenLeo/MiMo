@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TurnPageService } from 'src/app/services/turn-page.service';
 
 @Component({
   selector: 'app-square',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SquareComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private turnPageService: TurnPageService,
+    private route: ActivatedRoute,
+    ) { }
 
   ngOnInit(): void {
   }
+
+    actionToArchive = (aid?: number) => {
+
+        this.turnPageService.goNavigate(['../archive', ], { queryParams: { aid: aid }, relativeTo: this.route})
+    }
 
 }

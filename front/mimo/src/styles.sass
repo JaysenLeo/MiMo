@@ -1,9 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+// -------- 引入官方提供的 less 样式入口文件 -----------
+
 html
   background-image: linear-gradient(to bottom right, #c9cdff, #f0f2ff)
   width: 100%
-  height: 100%
+  height: 2000px
+  &::-webkit-scrollbar
+    display: none
+body
+  height: 2000px
+  &::-webkit-scrollbar
+    display: none
 .app-badge
+  display: flex
+  justify-content: space-between
   border-left: solid 0.5rem
-  border-image: linear-gradient(rgb(49 14 245) , rgb(77, 75, 177) , rgb(65 63 199))1 10 1
-  padding: 0.6rem 0.5rem
+  border-image: linear-gradient(to bottom right, #310ef5, #4c49ca, #9594c1) 1 10 1
+  padding: 0.6rem 0.5rem 0.6rem 0.7rem
+.app-badge .app-more
+  font-weight: 500
+  padding-right: 0.5rem
+  cursor: pointer

@@ -1,0 +1,55 @@
+.app-container-header
+  display: flex
+  justify-content: center
+  height: 4.5rem
+  position: relative
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset
+  &.app-container-header:after
+    content: ""
+    position: absolute
+    background: transparent
+    top: 50%//设置宽高仅仅设置上下左右边距是为了让系统自动定位。
+    bottom: 1px
+    left: 10px
+    right: 10px
+    z-index: -1 //将副阴影置于主阴影下
+    box-shadow: 0 0 20px rgba(0,0,0,0.7)
+    border-radius: 100px/10px
+
+.app-header-title
+  font-size: 28px!important
+  font-weight: bold
+
+.app-box-header
+  align-self: center
+  font-size: 18px
+
+.app-box-menu
+  display: flex
+  margin-right: 0.5rem
+  padding: 0 0.5rem
+  cursor: pointer
+
+.app-box-menu-active
+  &:after
+    width: 2rem
+    border-bottom: solid 0.2rem
+    border-image: linear-gradient(to bottom right, #310ef5, #4c49ca, #9594c1) 1 10 1
+    content: ""
+    position: relative
+    right: 45%
+.app-box-menu-inactive
+  &:after
+    width: 2rem
+    border-bottom: none
+    border-image: none
+    content: ""
+    position: relative
+    right: 45%
+.app-container-body
+  display: flex
+  justify-content: space-between
+  width: 90%
+
+.app-create-btn
+  background-image: linear-gradient(to bottom right, #3D13E5, #4623b3 49%, #7546c9 90%) !important

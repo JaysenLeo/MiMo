@@ -1,0 +1,22 @@
+  <div style="display: flex;justify-content: center;margin-top: 1rem">
+      <div style="width: 90%;display: block;margin-top: 3rem">
+        <div style="display: flex;justify-content: space-between;height: 20rem;">
+          <div class="workstation-right" >
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('我的知识库')" nz-button [nzType]="StatusSelectMenu('我的知识库') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="user" nzTheme="outline"></i>我的知识库
+            </button>
+            <nz-divider></nz-divider>
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('最近使用')" nz-button [nzType]="StatusSelectMenu('最近使用') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="field-time" nzTheme="outline"></i>最近使用
+            </button>
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('我的知识空间')" nz-button [nzType]="StatusSelectMenu('我的知识空间') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="code-sandbox" nzTheme="outline"></i>我的知识空间
+            </button>
+            <nz-divider></nz-divider>
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('我的关注')" nz-button [nzType]="StatusSelectMenu('我的关注') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="heart" nzTheme="outline"></i>我的关注
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>

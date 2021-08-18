@@ -1,1 +1,37 @@
-<p>square works!</p>
+<div style="padding-top: 3rem;" >
+  <div style="display: flex;justify-content: center;">
+    <div style="width: 90%;display: block;">
+      <div style="display: flex;justify-content: space-between;">
+        <div class="s-top s-left-width">
+          <img src="./assets/dashboard_knowledge.svg" alt="">
+        </div>
+        <!-- src="http://placehold.it/1920x600" -->
+        <div class="s-right s-right-width">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div style="display: flex;justify-content: center;margin-top: 1rem;max-height: 1080px;">
+      <div style="width: 90%;display: block;">
+        <div style="display: flex;justify-content: space-between;height: 100%;">
+          <div class="s-left s-left-width" >
+            <div class="app-badge">
+              <span>最近热门</span>
+            </div>
+            <div style="display: block;" >
+              <div (click)="actionToArchive(1)" >文章111</div>
+              <div (click)="actionToArchive(2)" >文章111</div>
+            </div>
+          </div>
+          <div class="s-right s-right-width" >
+            <div class="app-badge"><span>热门知识库</span><span class="app-more">查看全部</span></div>
+            <app-k-list></app-k-list>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

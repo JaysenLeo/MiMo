@@ -13,6 +13,7 @@ var (
 	mainWindowWidth  = 1920
 )
 
+
 func main() {
 	// Set logger
 	l := log.New(log.Writer(), log.Prefix(), log.Flags())

@@ -1,0 +1,30 @@
+<div class="app-container-header">
+  <div class="app-container-body">
+    <div style="display: flex;">
+      <div class="app-box-menu">
+          <div class="app-box-header app-header-title" >
+            MiMo
+          </div>
+      </div>
+      <ng-container *ngFor="let menu of menuStatusMapping">
+        <div class="app-box-menu" [ngClass]="menu.IsActive ? 'app-box-menu-active' : 'app-box-menu-inactive'"
+          (click)="ActionSelectMenu(menu.Label)">
+          <div class="app-box-header"  >
+            <i nz-icon [nzType]="menu.Icon" style="padding: 0 0.3rem;vertical-align: middle;" ></i>
+            {{menu.Text}}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div style="    display: flex;
+    justify-content: center;" >
+    <dir style="align-self: center;margin-right: 2rem">
+      <button class="app-create-btn" nz-button nzSize="large" nzType="primary">
+      <i nz-icon nzType="plus" nzTheme="outline"></i>创建
+    </button></dir>
+
+      <div class="app-box-header" ><i nz-icon nzType="user" nzTheme="outline"></i></div>
+    </div>
+
+  </div>
+</div>

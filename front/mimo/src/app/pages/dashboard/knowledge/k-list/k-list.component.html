@@ -1,0 +1,28 @@
+<ng-container *ngFor="let oneMyK of MyKListDataR">
+  <div style="" class="one-k" >
+    <div style="    max-width: 20%;
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    margin-top: 1rem;" >
+      <img [src]="oneMyK.KCoverImgUrl" class="k-cover" alt="">
+    </div>
+    <div style="display: inline-block;
+    width: auto;
+    vertical-align: top;" >
+      <div style="flex-direction: column;display: flex;margin: 0.5rem;" >
+        <div style="display: block;margin: 0.2rem 0.2rem .8rem 0.2rem">{{oneMyK.KTitle}}</div>
+        <div style="display: block;margin: 0.2rem;font-weight: normal;font-size: 15px;color: #a9abaa;" >{{oneMyK.KBrief}}</div>
+        <div style="display: block;margin: 0.2rem">
+          <nz-avatar nzText="U" style="color:#f56a00; background-color:#fde3cf;"></nz-avatar>
+          <span style="font-weight: normal;font-size: 17px;margin: 0 0.5rem">{{oneMyK.NikeName}}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</ng-container>
+
+
+

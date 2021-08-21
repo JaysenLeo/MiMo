@@ -1,0 +1,1 @@
+1. repository.cfg.toml 下 repository 的第一个 必须是 ./repository

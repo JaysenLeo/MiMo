@@ -1,0 +1,14 @@
+[meta]
+    total = 2
+    size =  '20Mb'
+[knowledge]
+    [knowledge.1]
+    name =          'MiMo开发手册'
+    cover =         '/static/img.png'
+    creation_time = '20210808121212'
+    store =         'direct:0'
+    [knowledge.2]
+    name =          '知识库1'
+    cover =         '/static/img.png'
+    creation_time = '20210808111111'
+    store =         'direct:0'

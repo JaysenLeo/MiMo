@@ -7,7 +7,10 @@ import (
 	"github.com/asticode/go-astikit"
 	"github.com/asticode/go-astilectron"
 	bootstrap "github.com/asticode/go-astilectron-bootstrap"
+	"github.com/gin-gonic/gin"
 	"log"
+	"mimo/internal/app/riro/cfg"
+	"mimo/internal/app/riro/service/index"
 	"os"
 	"time"
 )
@@ -42,7 +45,7 @@ func main() {
 
 	// Parse flags
 	_ = fs.Parse(os.Args[1:])
-
+	go RunRestfulServer()
 	// Run bootstrap
 	l.Printf("Running app built at %s\n", BuiltAt)
 	if err := bootstrap.Run(bootstrap.Options{
@@ -109,6 +112,28 @@ func main() {
 		l.Fatal(fmt.Errorf("running bootstrap failed: %w", err))
 	}
 }
+type KnowledgeDetailParams struct {
+	Kid   int64 `uri:"kid" binding:"required"`
+}
+func RunRestfulServer() {
+	r := gin.Default()
+	r.GET("/knowledge/:kid", func(c *gin.Context) {
+		var knowledgeDetailParams KnowledgeDetailParams
+		if err := c.ShouldBindUri(&knowledgeDetailParams); err != nil {
+			c.JSON(400, gin.H{"msg": err})
+			return
+		}
+		riro := index.NewRiRo(func() cfg.Option {
+			opt := cfg.NewRiRoOption([]string{"E:\\DevHub\\MiMo\\repository" })
+			return *opt
+		})
+		c.JSON(200, gin.H{
+			"Data": riro.ListAllLocalOneKnowledgeFile(knowledgeDetailParams.Kid),
+			"Status": "knowledge.GotInfoOK",
+		})
+	})
+	_ = r.Run(":8088")
+}
 
 // handleMessages handles messages
 func HandleMessages(_ *astilectron.Window, m bootstrap.MessageIn) (payload interface{}, err error) {
@@ -120,7 +145,14 @@ func HandleMessages(_ *astilectron.Window, m bootstrap.MessageIn) (payload inter
 		return struct{
 			Data string `json:"data"`
 		}{ Data: "world" }, nil
-
+	case "knowledge":
+		riro := index.NewRiRo(func() cfg.Option {
+			opt := cfg.NewRiRoOption([]string{"E:\\DevHub\\MiMo\\repository" })
+			return *opt
+		})
+		return struct{
+			Data []map[string]interface{} `json:"data"`
+		}{ Data: riro.ListAllLocalKnowledge() } , nil
 	}
 	return
 }

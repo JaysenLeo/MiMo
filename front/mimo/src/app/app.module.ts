@@ -9,6 +9,7 @@ import { zh_CN } from 'ng-zorro-antd/i18n';
 import zh from '@angular/common/locales/zh';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxAstilectronModule } from './share/ngx-astilectron/ngx-astilectron.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     MarkdownModule.forRoot(),
+    NgxAstilectronModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

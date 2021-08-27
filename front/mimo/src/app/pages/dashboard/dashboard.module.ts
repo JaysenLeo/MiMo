@@ -12,6 +12,7 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import {
   UserOutline, MoreOutline, FieldTimeOutline, HeartOutline, CodeSandboxOutline,
@@ -36,6 +37,7 @@ import { AppHeaderModule } from 'src/app/share/component/app-header/app-header.m
     NzButtonModule,
     NzAvatarModule,
     NzDividerModule,
+    NzCardModule,
     NzIconModule.forChild([UserOutline, MoreOutline, FieldTimeOutline, HeartOutline, CodeSandboxOutline,
     PlusOutline]),
     AppHeaderModule

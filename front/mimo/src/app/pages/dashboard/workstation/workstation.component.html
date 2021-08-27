@@ -2,20 +2,33 @@
       <div style="width: 90%;display: block;margin-top: 3rem">
         <div style="display: flex;justify-content: space-between;height: 20rem;">
           <div class="workstation-right" >
-            <button class="workstation-menu-btn" (click)="ActionSelectMenu('我的知识库')" nz-button [nzType]="StatusSelectMenu('我的知识库') ? 'link' : 'text'" nzBlock nzSize="large" >
-              <i nz-icon nzType="user" nzTheme="outline"></i>我的知识库
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('knowledge')" nz-button [nzType]="StatusSelectMenu('knowledge') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="user" nzTheme="outline"></i>{{TextSelectMenu('knowledge')}}
             </button>
             <nz-divider></nz-divider>
-            <button class="workstation-menu-btn" (click)="ActionSelectMenu('最近使用')" nz-button [nzType]="StatusSelectMenu('最近使用') ? 'link' : 'text'" nzBlock nzSize="large" >
-              <i nz-icon nzType="field-time" nzTheme="outline"></i>最近使用
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('recently')" nz-button [nzType]="StatusSelectMenu('recently') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="field-time" nzTheme="outline"></i>{{TextSelectMenu('recently')}}
             </button>
-            <button class="workstation-menu-btn" (click)="ActionSelectMenu('我的知识空间')" nz-button [nzType]="StatusSelectMenu('我的知识空间') ? 'link' : 'text'" nzBlock nzSize="large" >
-              <i nz-icon nzType="code-sandbox" nzTheme="outline"></i>我的知识空间
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('space')" nz-button [nzType]="StatusSelectMenu('space') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="code-sandbox" nzTheme="outline"></i>{{TextSelectMenu('space')}}
             </button>
             <nz-divider></nz-divider>
-            <button class="workstation-menu-btn" (click)="ActionSelectMenu('我的关注')" nz-button [nzType]="StatusSelectMenu('我的关注') ? 'link' : 'text'" nzBlock nzSize="large" >
-              <i nz-icon nzType="heart" nzTheme="outline"></i>我的关注
+            <button class="workstation-menu-btn" (click)="ActionSelectMenu('attention')" nz-button [nzType]="StatusSelectMenu('attention') ? 'link' : 'text'" nzBlock nzSize="large" >
+              <i nz-icon nzType="heart" nzTheme="outline"></i>{{TextSelectMenu('attention')}}
             </button>
+          </div>
+          <div class="workstation-left">
+            <ng-container *ngFor="let knowledge of knowledgeList">
+                <nz-card nzHoverable style="width:240px;display: inline-block;margin: 0.5rem" [nzCover]="coverTemplate">
+                  <nz-card-meta [nzTitle]="knowledge.name" [nzDescription]="knowledge.brief"></nz-card-meta>
+                </nz-card>
+                <ng-template #coverTemplate>
+                  <img alt="example" [attr.src]="knowledge.cover" style="width:240px;height: 240px;" />
+                </ng-template>
+            </ng-container>
+
+
+
           </div>
         </div>
       </div>

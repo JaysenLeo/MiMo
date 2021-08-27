@@ -3,12 +3,16 @@
     size =  '20Mb'
 [knowledge]
     [knowledge.1]
+    kid =            1
     name =          'MiMo开发手册'
-    cover =         '/static/img.png'
+    cover =         './assets/img/2291381582291.svg'
     creation_time = '20210808121212'
+    brief =         '需求、技术文档'
     store =         'direct:0'
     [knowledge.2]
+    kid =           2
     name =          '知识库1'
-    cover =         '/static/img.png'
+    cover =         'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png'
     creation_time = '20210808111111'
+    brief =         'xxx'
     store =         'direct:0'

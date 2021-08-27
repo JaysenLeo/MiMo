@@ -1,0 +1,32 @@
+[meta]
+    total = 4
+    size =  '20Mb'
+[file]
+    [file.1]
+    fid =            1
+    name =          'dev_plan'
+    cover =         './assets/img/2291381582291.svg'
+    creation_time = '20210808121212'
+    brief =         '文件描述'
+    store =         'direct:0'
+    [file.2]
+    fid =           2
+    name =          'riro_usecase'
+    cover =         'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png'
+    creation_time = '20210808111111'
+    brief =         '文件描述'
+    store =         'direct:0'
+    [file.3]
+    fid =           3
+    name =          'riro_文件索引系统方案设计'
+    cover =         'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png'
+    creation_time = '20210808111111'
+    brief =         '文件描述'
+    store =         'direct:0'
+    [file.4]
+    fid =           4
+    name =          'setup'
+    cover =         'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png'
+    creation_time = '20210808111111'
+    brief =         '文件描述'
+    store =         'direct:0'
